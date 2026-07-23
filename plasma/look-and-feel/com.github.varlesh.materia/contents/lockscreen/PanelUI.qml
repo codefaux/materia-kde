@@ -2,7 +2,7 @@
 // Copyright Alexey Varfolomeev 2021 <varlesh@gmail.com>
 import QtQuick 2.8
 import QtQuick.Controls 1.1
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects
 import org.kde.plasma.workspace.components 2.0 as PW
 
 import "../components"
