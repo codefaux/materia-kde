@@ -135,7 +135,7 @@ PlasmaCore.ColorScope {
         drag.filterChildren: true
         onPressed: uiVisible = true;
         onPositionChanged: uiVisible = true;
-        onUiVisibleChanged: {
+        function onUiVisibleChanged() {
             if (blockUI) {
                 fadeoutTimer.running = false;
             } else if (uiVisible) {
@@ -146,7 +146,7 @@ PlasmaCore.ColorScope {
                 authenticator.tryUnlock();
             }
         }
-        onBlockUIChanged: {
+        function onBlockUIChanged() {
             if (blockUI) {
                 fadeoutTimer.running = false;
                 uiVisible = true;
@@ -167,7 +167,7 @@ PlasmaCore.ColorScope {
         Timer {
             id: fadeoutTimer
             interval: 10000
-            onTriggered: {
+            function onTriggered() {
                 if (!lockScreenRoot.blockUI) {
                     lockScreenRoot.uiVisible = false;
                 }
@@ -182,7 +182,7 @@ PlasmaCore.ColorScope {
         Timer {
             id: graceLockTimer
             interval: 3000
-             onTriggered: {
+             function onTriggered() {
                 root.clearPassword();
                 authenticator.tryUnlock();
             }
@@ -210,7 +210,7 @@ PlasmaCore.ColorScope {
             PropertyAnimation { id: stateChangeAnimation; properties: "y"; duration: 300; easing.type: Easing.InQuad}
             PropertyAnimation { properties: "opacity"; duration: 300}
 
-            onRunningChanged: {
+            function onRunningChanged() {
                 // after the animation has finished switch session: since we only animate the transition TO state "onOtherSession"
                 // and not the other way around, we don't have to check the state we transitioned into
                 if (/* lockScreenRoot.state == "onOtherSession" && */ !running) {
@@ -327,7 +327,7 @@ PlasmaCore.ColorScope {
                     return text
                 }
 
-                 onPasswordResult: {
+                 function onPasswordResult() {
                     authenticator.respond(password)
                 }
             }

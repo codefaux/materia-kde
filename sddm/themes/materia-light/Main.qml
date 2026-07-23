@@ -30,10 +30,10 @@ Rectangle {
 
     Connections {
         target: sddm
-        onLoginSucceeded: {
+        function onLoginSucceeded() {
 
         }
-        onLoginFailed: {
+        function onLoginFailed() {
             password.placeholderText = textConstants.loginFailed
             password.placeholderTextColor = "#f44336"
             password.text = ""
@@ -89,7 +89,7 @@ Rectangle {
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
-                    onEntered: {
+                    function onEntered() {
                         shutdown.source = "images/system-shutdown-hover.svg"
                         var component = Qt.createComponent(
                                     "components/ShutdownToolTip.qml")
@@ -100,10 +100,10 @@ Rectangle {
                             tooltip.destroy(600)
                         }
                     }
-                    onExited: {
+                    function onExited() {
                         shutdown.source = "images/system-shutdown.svg"
                     }
-                    onClicked: {
+                    function onClicked() {
                         shutdown.source = "images/system-shutdown-pressed.svg"
                         sddm.powerOff()
                     }
@@ -130,7 +130,7 @@ Rectangle {
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
-                    onEntered: {
+                    function onEntered() {
                         reboot.source = "images/system-reboot-hover.svg"
                         var component = Qt.createComponent(
                                     "components/RebootToolTip.qml")
@@ -141,10 +141,10 @@ Rectangle {
                             tooltip.destroy(600)
                         }
                     }
-                    onExited: {
+                    function onExited() {
                         reboot.source = "images/system-reboot.svg"
                     }
-                    onClicked: {
+                    function onClicked() {
                         reboot.source = "images/system-reboot-pressed.svg"
                         sddm.reboot()
                     }
@@ -170,7 +170,7 @@ Rectangle {
         id: timetr
         interval: 500
         repeat: true
-        onTriggered: {
+        function onTriggered() {
             timelb.text = Qt.formatDateTime(new Date(), "HH:mm")
         }
     }
@@ -253,7 +253,7 @@ Rectangle {
                             maskSource: mask
                         }
                         source: "/var/lib/AccountsService/icons/" + user.currentText
-                        onStatusChanged: {
+                        function onStatusChanged() {
                             if (status == Image.Error)
                                 return source = "images/.face.icon"
                         }
@@ -278,7 +278,7 @@ Rectangle {
                         Material.foreground: user.currentIndex === index ? ulistview.contentItem.Material.accent : ulistview.contentItem.Material.foreground
                         highlighted: user.highlightedIndex === index
                         hoverEnabled: user.hoverEnabled
-                        onClicked: {
+                        function onClicked() {
                             user.currentIndex = index
                             ulistview.currentIndex = index
                             user.popup.close()
@@ -399,7 +399,7 @@ Rectangle {
                         Material.foreground: session.currentIndex === index ? slistview.contentItem.Material.accent : slistview.contentItem.Material.foreground
                         highlighted: session.highlightedIndex === index
                         hoverEnabled: session.hoverEnabled
-                        onClicked: {
+                        function onClicked() {
                             session.currentIndex = index
                             slistview.currentIndex = index
                             session.popup.close()

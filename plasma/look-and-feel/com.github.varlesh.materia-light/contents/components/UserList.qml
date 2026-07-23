@@ -81,7 +81,7 @@ ListView {
 
         isCurrent: ListView.isCurrentItem
 
-        onClicked: {
+        function onClicked() {
             ListView.view.currentIndex = index;
             ListView.view.userSelected();
         }

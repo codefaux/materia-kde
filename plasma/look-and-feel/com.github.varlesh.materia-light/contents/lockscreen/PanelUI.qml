@@ -46,7 +46,7 @@ Item {
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
-                    onEntered: {
+                    function onEntered() {
                         shutdown.source = "images/system-shutdown-hover.svg"
                         var component = Qt.createComponent(
                                     "../components/ShutdownToolTip.qml")
@@ -57,10 +57,10 @@ Item {
                             tooltip.destroy(600)
                         }
                     }
-                    onExited: {
+                    function onExited() {
                         shutdown.source = "images/system-shutdown.svg"
                     }
-                    onClicked: {
+                    function onClicked() {
                         shutdown.source = "images/system-shutdown-pressed.svg"
                         onClicked: action_shutDown()
                     }
@@ -87,7 +87,7 @@ Item {
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
-                    onEntered: {
+                    function onEntered() {
                         reboot.source = "images/system-reboot-hover.svg"
                         var component = Qt.createComponent(
                                     "../components/RebootToolTip.qml")
@@ -98,10 +98,10 @@ Item {
                             tooltip.destroy(600)
                         }
                     }
-                    onExited: {
+                    function onExited() {
                         reboot.source = "images/system-reboot.svg"
                     }
-                    onClicked: {
+                    function onClicked() {
                         reboot.source = "images/system-reboot-pressed.svg"
                         onClicked: action_reBoot()
                     }
@@ -146,7 +146,7 @@ Item {
         id: timetr
         interval: 500
         repeat: true
-        onTriggered: {
+        function onTriggered() {
             timelb.text = Qt.formatDateTime(new Date(), "HH:mm")
         }
     }

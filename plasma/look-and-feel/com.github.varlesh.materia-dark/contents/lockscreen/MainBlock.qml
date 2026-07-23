@@ -71,7 +71,7 @@ SessionManagementScreen {
             enabled: !authenticator.graceLocked
             revealPasswordButtonShown: true
 
-            onAccepted: {
+            function onAccepted() {
                 if (lockScreenUiVisible) {
                     startLogin();
                 }
@@ -118,7 +118,7 @@ SessionManagementScreen {
             implicitWidth: switchButton.implicitHeight
             iconSource: "system-switch-user"
             
-            onClicked: {
+            function onClicked() {
                 // If there are no existing sessions to switch to, create a new one instead
                 if (((sessionsModel.showNewSessionEntry
                       && sessionsModel.count === 1)

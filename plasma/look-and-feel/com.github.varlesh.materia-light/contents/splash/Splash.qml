@@ -9,7 +9,7 @@ Rectangle {
      
      property real size: units.gridUnit * 20
 
-    onStageChanged: {
+    function onStageChanged() {
         if (stage == 1) {
             introAnimation.running = true
         }
