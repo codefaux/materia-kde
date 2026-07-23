@@ -160,7 +160,7 @@ PlasmaCore.ColorScope {
                 root.clearPassword();
             }
         }
-        Keys.onPressed: {
+        Keys.onPressed: (event) =>
             uiVisible = true;
             event.accepted = false;
         }
