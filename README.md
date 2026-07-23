@@ -1,8 +1,12 @@
-<img src="https://raw.githubusercontent.com/PapirusDevelopmentTeam/materia-kde/master/logo.png" alt="materia-kde-logo" align="right" />
+<img src="https://raw.githubusercontent.com/codefaux/materia-kde/master/logo.png" alt="materia-kde-logo" align="right" />
 
 # Materia KDE
 
-This is a port of the popular [GTK theme Materia](https://github.com/nana-4/materia-theme) for the Plasma 5 desktop with a few additions and extras.
+This is a hack of a port of the seemingly-abandoned [GTK theme Materia](https://github.com/nana-4/materia-theme) for the Plasma 5, to make it work on Plasma 6 a desktop with a few additions and extras.
+
+I (@codefaux) do not use Gnome or KDE, but I got really tired of which theme I saw on what app being a dice roll, so I'm making them work ENOUGH FOR MY USES for a consistent experience. I also have a [fork of materia-theme](https://github.com/codefaux/materia-theme) in case I need to fix it. Feel free to use it. I'm sorry if they don't work for yours; let me know and I'll try to help if/where I can.
+
+Original instructions below, pruned to avoid references to the original.
 
 In this repository you'll find:
 - Aurorae window decoration themes
@@ -17,47 +21,29 @@ In this repository you'll find:
 
 ## Installation
 
-### Ubuntu and derivatives
-
-You can install materia-kde from our official [PPA](https://launchpad.net/~papirus/+archive/ubuntu/papirus):
-
-```
-sudo add-apt-repository ppa:papirus/papirus
-sudo apt-get update
-sudo apt-get install --install-recommends materia-kde
-```
-
-or download .deb packages from [here](https://launchpad.net/~papirus/+archive/ubuntu/papirus/+packages?field.name_filter=materia-kde).
-
 ### Materia KDE installer
 
 #### Install
 
-Use this command to install the latest version directly from this repo (independently of your distro):
+Use this command to install the latest version directly from this repo (independently of your distro's package manager, which makes assumptions and maybe isn't a great idea):
 
 ```
-wget -qO- https://raw.githubusercontent.com/PapirusDevelopmentTeam/materia-kde/master/install.sh | sh
+wget -qO- https://raw.githubusercontent.com/codefaux/materia-kde/master/install.sh | sh
 ```
 
 #### Uninstall
 
 ```
-wget -qO- https://raw.githubusercontent.com/PapirusDevelopmentTeam/materia-kde/master/install.sh | uninstall=true sh
+wget -qO- https://raw.githubusercontent.com/codefaux/materia-kde/master/install.sh | uninstall=true sh
 ```
 
 ### Third-party packages
 
-Packages in this section are not part of the official repositories. If you have any questions or concerns about any of these packages, please contact the package maintainer.
-
-| **Distro** | **Maintainer** | **Package** |
-|:-----------|:---------------|:------------|
-| Arch Linux | Bruno Pagani | `sudo pacman -S materia-kde kvantum-theme-materia` <sup>[[link](https://www.archlinux.org/packages/community/any/materia-kde/)]</sup> |
-| Arch Linux | Josip Ponjavic | [materia-kde-git](https://aur.archlinux.org/packages/materia-kde-git) <sup>AUR</sup> |
-| openSUSE   | Konstantin Voinov | [materia-kde](https://software.opensuse.org/download.html?project=home:kill_it&package=materia-kde) <sup>OBS [[link](https://build.opensuse.org/package/show/home:kill_it/materia-kde)]</sub> |
-| Fedora     | Robert-André Mauchin | `sudo dnf install materia-kde` <sup>[[src](https://src.fedoraproject.org/rpms/materia-kde)]</sup> |
-| Debian 10+ | Debian Desktop Themes Team | [materia-kde](https://tracker.debian.org/pkg/materia-kde) |
+- I won't be explicitly maintaining any distribution's packages. Let me know if you know how or need me to build one, especially if it can be done using Github workflows. I'm not interested in maintaining packages, but if they can be automated I certainly won't object.
 
 **NOTE:** If you are a maintainer and want your package to be in this list, please feel free to create an issue or pull request.
+
+### Everything below is from the original repo, these are not @codefaux responsibility
 
 ## Recommendations
 
@@ -125,15 +111,6 @@ Affects apps include, but are not limited to:
 - KDE Connect SMS Module
 - Some `systemsettings5` and `kcm` modules
 - and more...
-
-## More Materia themes
-
-- [Materia skin for VLC](https://github.com/PapirusDevelopmentTeam/materia-vlc)
-- [Telegram theme](https://t.me/addtheme/MateriaDarkUpdated)
-- [Pegasus Frontend theme](https://github.com/varlesh/pegasus-materia-dark)
-
-## Donate
-
 
 ## License
 
