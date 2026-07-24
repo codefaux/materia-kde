@@ -1,7 +1,7 @@
 [SddmGreeterTheme]
 Name=Materia
 Description=real material style
-Author=Alexey Varfolomeev
+Author=codefaux
 Copyright=(c) 2021, Alexey Varfolomeev
 License=ISC
 Type=sddm-theme
@@ -12,3 +12,4 @@ MainScript=Main.qml
 ConfigFile=theme.conf
 Theme-Id=materia
 Theme-API=2.0
+QtVersion=6

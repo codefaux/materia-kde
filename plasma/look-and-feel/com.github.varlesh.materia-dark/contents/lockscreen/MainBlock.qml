@@ -1,4 +1,5 @@
 // Modified by Alexey Varfolomeev 2021 <varlesh@gmail.com>
+// Modified by github.com/codefaux
 
 /*
  *   Copyright 2016 David Edmundson <davidedmundson@kde.org>
